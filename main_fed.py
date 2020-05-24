@@ -117,25 +117,25 @@ if __name__ == '__main__':
         plt.figure()
         plt.plot(range(len(list_loss)), list_loss)
         plt.ylabel('train_loss')
-        plt.savefig('./save/seed{}_naive_loss_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100 ))
+        plt.savefig('./save/seed{}_naive_loss_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100 ))
         pickle.dump(list_loss,
-                    open('./save/seed{}_naive_loss_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.fedavg_averaging, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
+                    open('./save/seed{}_naive_loss_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
         
         # plot global test acc curve
         plt.figure()
         plt.plot(range(len(global_acc_tests)), global_acc_tests)
         plt.ylabel('global_acc_tests')
-        plt.savefig('./save/seed{}_naive_gacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100))
+        plt.savefig('./save/seed{}_naive_gacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100))
         pickle.dump(global_acc_tests,
-                    open('./save/seed{}_naive_gacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
+                    open('./save/seed{}_naive_gacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
         
         # plot local test acc curve
         plt.figure()
         plt.plot(range(len(local_acc_tests)), local_acc_tests)
         plt.ylabel('local_acc_tests')
-        plt.savefig('./save/seed{}_naive_lacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100))
+        plt.savefig('./save/seed{}_naive_lacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.png'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100))
         pickle.dump(local_acc_tests,
-                    open('./save/seed{}_naive_lacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.dataset, args.model.replace('_prog1',''), args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
+                    open('./save/seed{}_naive_lacc_{}_{}_{}_K{}C{}_noniid{}unb{}_E{}B{}.pkl'.format(args.manual_seed, args.dataset, args.model, args.epochs, args.num_users, args.frac, args.class_per_device, args.unbalance, 1, 100),'wb'))
        
         # save model
         torch.save(net_glob.state_dict(), filename_nn)
@@ -208,13 +208,12 @@ if __name__ == '__main__':
         
         # testing
         net_glob.eval()
-        acc_test, _, confusion_matrix = test_img(net_glob, dataset_test, args)
+        acc_test, _ = test_img(net_glob, dataset_test, args)
         local_acc_test, _, _ = test_img_local(net_glob, 
                                               dataset_test, 
                                               test_dict_users, args)
         global_acc_tests.append(acc_test)
         local_acc_tests.append(sum(local_acc_test)/len(local_acc_test))
-        print('Round {:3d}, Average confusion_matrix:'.format(iter), confusion_matrix)
         print('Round {:3d}, Average global accuracy {:.2f}'.format(iter, acc_test))
         print('Round {:3d}, Average local accuracy {:.2f}'.format(iter, sum(local_acc_test)/len(local_acc_test)))
         
