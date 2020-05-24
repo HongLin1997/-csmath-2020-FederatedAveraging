@@ -1,3 +1,3 @@
-# Data
+# Log
 
-MNIST & CIFAR-10 datasets will be downloaded automatically by the torchvision package.
+The log files for running our project can be stored under this path. 
