@@ -1,0 +1,2624 @@
+Namespace(bs=128, centralized=True, class_per_device=2, dataset='mnist', decay_rate=0.995, device=device(type='cuda', index=0), epochs=200, frac=0.1, gpu=0, kernel_num=9, kernel_sizes='3,4,5', local_bs=10, local_ep=1, lr=0.01, manual_seed=42, max_data_per_device=0, max_pool='True', model='softmax', momentum=0, noniid=1, noniidness=20, norm='batch_norm', num_channels=1, num_classes=10, num_filters=32, num_users=100, per_epoch=1.0, seed=1, split='user', stopping_rounds=10, unbalance=2.0, verbose=False)
+use random seed: 42
+args.noniid= 1 args.class_per_device= 2 args.unbalance= 2.0
+/home/zju/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:43: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+[5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+unbalancing
+/home/zju/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:48: UserWarning: test_labels has been renamed targets
+  warnings.warn("test_labels has been renamed targets")
+[980, 1135, 1032, 1010, 982, 892, 958, 1028, 974, 1009]
+unbalancing
+train data partition
+sum: 59901
+mean: 599.01
+std: 874.0787892976239
+test data partition
+sum: 9921
+mean: 99.21
+std: 144.76638387415775
+federated learning...
+SoftmaxClassifier(
+  (layer_input): Linear(in_features=784, out_features=10, bias=True)
+)
+33 client:  [6 7]
+77 client:  [4 5]
+69 client:  [8 9]
+13 client:  [6 7]
+63 client:  [6 7]
+87 client:  [4 5]
+72 client:  [4 5]
+18 client:  [6 7]
+91 client:  [2 3]
+48 client:  [6 7]
+Round   0, Average loss 0.676
+Round   0, Average global accuracy 23.00
+Round   0, Average local accuracy 24.43
+70 client:  [0 1]
+18 client:  [6 7]
+55 client:  [0 1]
+79 client:  [8 9]
+9 client:  [8 9]
+61 client:  [2 3]
+16 client:  [2 3]
+97 client:  [4 5]
+10 client:  [0 1]
+19 client:  [8 9]
+Round   1, Average loss 0.336
+Round   1, Average global accuracy 40.00
+Round   1, Average local accuracy 41.25
+29 client:  [8 9]
+23 client:  [6 7]
+27 client:  [4 5]
+84 client:  [8 9]
+74 client:  [8 9]
+2 client:  [4 5]
+98 client:  [6 7]
+16 client:  [2 3]
+8 client:  [6 7]
+82 client:  [4 5]
+Round   2, Average loss 0.347
+Round   2, Average global accuracy 45.00
+Round   2, Average local accuracy 45.21
+83 client:  [6 7]
+21 client:  [2 3]
+1 client:  [2 3]
+69 client:  [8 9]
+55 client:  [0 1]
+12 client:  [4 5]
+89 client:  [8 9]
+32 client:  [4 5]
+88 client:  [6 7]
+26 client:  [2 3]
+Round   3, Average loss 0.156
+Round   3, Average global accuracy 57.00
+Round   3, Average local accuracy 55.45
+80 client:  [0 1]
+34 client:  [8 9]
+0 client:  [0 1]
+93 client:  [6 7]
+43 client:  [6 7]
+46 client:  [2 3]
+96 client:  [2 3]
+86 client:  [2 3]
+6 client:  [2 3]
+23 client:  [6 7]
+Round   4, Average loss 0.258
+Round   4, Average global accuracy 58.00
+Round   4, Average local accuracy 59.03
+16 client:  [2 3]
+4 client:  [8 9]
+12 client:  [4 5]
+69 client:  [8 9]
+13 client:  [6 7]
+33 client:  [6 7]
+31 client:  [2 3]
+97 client:  [4 5]
+5 client:  [0 1]
+10 client:  [0 1]
+Round   5, Average loss 0.247
+Round   5, Average global accuracy 72.00
+Round   5, Average local accuracy 74.02
+95 client:  [0 1]
+37 client:  [4 5]
+94 client:  [8 9]
+17 client:  [4 5]
+38 client:  [6 7]
+52 client:  [4 5]
+99 client:  [8 9]
+86 client:  [2 3]
+4 client:  [8 9]
+81 client:  [2 3]
+Round   6, Average loss 0.303
+Round   6, Average global accuracy 68.00
+Round   6, Average local accuracy 67.52
+94 client:  [8 9]
+93 client:  [6 7]
+53 client:  [6 7]
+95 client:  [0 1]
+98 client:  [6 7]
+24 client:  [8 9]
+25 client:  [0 1]
+74 client:  [8 9]
+42 client:  [4 5]
+39 client:  [8 9]
+Round   7, Average loss 0.223
+Round   7, Average global accuracy 56.00
+Round   7, Average local accuracy 53.86
+49 client:  [8 9]
+45 client:  [0 1]
+46 client:  [2 3]
+18 client:  [6 7]
+89 client:  [8 9]
+61 client:  [2 3]
+14 client:  [8 9]
+67 client:  [4 5]
+53 client:  [6 7]
+39 client:  [8 9]
+Round   8, Average loss 0.281
+Round   8, Average global accuracy 56.00
+Round   8, Average local accuracy 54.49
+52 client:  [4 5]
+65 client:  [0 1]
+92 client:  [4 5]
+10 client:  [0 1]
+56 client:  [2 3]
+95 client:  [0 1]
+19 client:  [8 9]
+1 client:  [2 3]
+24 client:  [8 9]
+51 client:  [2 3]
+Round   9, Average loss 0.195
+Round   9, Average global accuracy 69.00
+Round   9, Average local accuracy 69.99
+30 client:  [0 1]
+48 client:  [6 7]
+0 client:  [0 1]
+31 client:  [2 3]
+71 client:  [2 3]
+8 client:  [6 7]
+2 client:  [4 5]
+60 client:  [0 1]
+91 client:  [2 3]
+77 client:  [4 5]
+Round  10, Average loss 0.198
+Round  10, Average global accuracy 70.00
+Round  10, Average local accuracy 74.61
+58 client:  [6 7]
+2 client:  [4 5]
+27 client:  [4 5]
+96 client:  [2 3]
+79 client:  [8 9]
+84 client:  [8 9]
+22 client:  [4 5]
+90 client:  [0 1]
+77 client:  [4 5]
+41 client:  [2 3]
+Round  11, Average loss 0.375
+Round  11, Average global accuracy 74.00
+Round  11, Average local accuracy 77.23
+5 client:  [0 1]
+98 client:  [6 7]
+38 client:  [6 7]
+82 client:  [4 5]
+20 client:  [0 1]
+84 client:  [8 9]
+8 client:  [6 7]
+63 client:  [6 7]
+93 client:  [6 7]
+37 client:  [4 5]
+Round  12, Average loss 0.309
+Round  12, Average global accuracy 75.00
+Round  12, Average local accuracy 74.67
+8 client:  [6 7]
+81 client:  [2 3]
+68 client:  [6 7]
+86 client:  [2 3]
+78 client:  [6 7]
+37 client:  [4 5]
+66 client:  [2 3]
+54 client:  [8 9]
+62 client:  [4 5]
+33 client:  [6 7]
+Round  13, Average loss 0.244
+Round  13, Average global accuracy 72.00
+Round  13, Average local accuracy 70.61
+43 client:  [6 7]
+66 client:  [2 3]
+83 client:  [6 7]
+33 client:  [6 7]
+90 client:  [0 1]
+59 client:  [8 9]
+19 client:  [8 9]
+86 client:  [2 3]
+25 client:  [0 1]
+22 client:  [4 5]
+Round  14, Average loss 0.237
+Round  14, Average global accuracy 74.00
+Round  14, Average local accuracy 74.77
+33 client:  [6 7]
+37 client:  [4 5]
+61 client:  [2 3]
+77 client:  [4 5]
+98 client:  [6 7]
+23 client:  [6 7]
+22 client:  [4 5]
+13 client:  [6 7]
+73 client:  [6 7]
+94 client:  [8 9]
+Round  15, Average loss 0.250
+Round  15, Average global accuracy 73.00
+Round  15, Average local accuracy 73.06
+67 client:  [4 5]
+41 client:  [2 3]
+53 client:  [6 7]
+47 client:  [4 5]
+78 client:  [6 7]
+19 client:  [8 9]
+2 client:  [4 5]
+35 client:  [0 1]
+33 client:  [6 7]
+15 client:  [0 1]
+Round  16, Average loss 0.107
+Round  16, Average global accuracy 76.00
+Round  16, Average local accuracy 77.44
+35 client:  [0 1]
+18 client:  [6 7]
+98 client:  [6 7]
+66 client:  [2 3]
+54 client:  [8 9]
+92 client:  [4 5]
+63 client:  [6 7]
+9 client:  [8 9]
+1 client:  [2 3]
+62 client:  [4 5]
+Round  17, Average loss 0.197
+Round  17, Average global accuracy 79.00
+Round  17, Average local accuracy 80.51
+59 client:  [8 9]
+71 client:  [2 3]
+46 client:  [2 3]
+15 client:  [0 1]
+54 client:  [8 9]
+6 client:  [2 3]
+83 client:  [6 7]
+19 client:  [8 9]
+25 client:  [0 1]
+39 client:  [8 9]
+Round  18, Average loss 0.144
+Round  18, Average global accuracy 74.00
+Round  18, Average local accuracy 74.11
+53 client:  [6 7]
+98 client:  [6 7]
+82 client:  [4 5]
+97 client:  [4 5]
+1 client:  [2 3]
+22 client:  [4 5]
+51 client:  [2 3]
+68 client:  [6 7]
+95 client:  [0 1]
+29 client:  [8 9]
+Round  19, Average loss 0.216
+Round  19, Average global accuracy 82.00
+Round  19, Average local accuracy 82.33
+28 client:  [6 7]
+2 client:  [4 5]
+60 client:  [0 1]
+27 client:  [4 5]
+86 client:  [2 3]
+93 client:  [6 7]
+12 client:  [4 5]
+31 client:  [2 3]
+8 client:  [6 7]
+57 client:  [4 5]
+Round  20, Average loss 0.163
+Round  20, Average global accuracy 74.00
+Round  20, Average local accuracy 73.56
+21 client:  [2 3]
+97 client:  [4 5]
+15 client:  [0 1]
+19 client:  [8 9]
+26 client:  [2 3]
+36 client:  [2 3]
+12 client:  [4 5]
+50 client:  [0 1]
+48 client:  [6 7]
+2 client:  [4 5]
+Round  21, Average loss 0.125
+Round  21, Average global accuracy 71.00
+Round  21, Average local accuracy 71.97
+24 client:  [8 9]
+45 client:  [0 1]
+49 client:  [8 9]
+77 client:  [4 5]
+97 client:  [4 5]
+66 client:  [2 3]
+81 client:  [2 3]
+79 client:  [8 9]
+93 client:  [6 7]
+89 client:  [8 9]
+Round  22, Average loss 0.310
+Round  22, Average global accuracy 83.00
+Round  22, Average local accuracy 82.86
+78 client:  [6 7]
+58 client:  [6 7]
+70 client:  [0 1]
+86 client:  [2 3]
+80 client:  [0 1]
+2 client:  [4 5]
+72 client:  [4 5]
+60 client:  [0 1]
+63 client:  [6 7]
+26 client:  [2 3]
+Round  23, Average loss 0.201
+Round  23, Average global accuracy 82.00
+Round  23, Average local accuracy 82.69
+23 client:  [6 7]
+51 client:  [2 3]
+44 client:  [8 9]
+49 client:  [8 9]
+20 client:  [0 1]
+13 client:  [6 7]
+6 client:  [2 3]
+17 client:  [4 5]
+7 client:  [4 5]
+66 client:  [2 3]
+Round  24, Average loss 0.254
+Round  24, Average global accuracy 78.00
+Round  24, Average local accuracy 79.15
+70 client:  [0 1]
+18 client:  [6 7]
+95 client:  [0 1]
+1 client:  [2 3]
+51 client:  [2 3]
+23 client:  [6 7]
+75 client:  [0 1]
+62 client:  [4 5]
+99 client:  [8 9]
+76 client:  [2 3]
+Round  25, Average loss 0.177
+Round  25, Average global accuracy 78.00
+Round  25, Average local accuracy 80.36
+84 client:  [8 9]
+4 client:  [8 9]
+89 client:  [8 9]
+54 client:  [8 9]
+52 client:  [4 5]
+71 client:  [2 3]
+83 client:  [6 7]
+43 client:  [6 7]
+70 client:  [0 1]
+25 client:  [0 1]
+Round  26, Average loss 0.155
+Round  26, Average global accuracy 81.00
+Round  26, Average local accuracy 80.17
+78 client:  [6 7]
+11 client:  [2 3]
+50 client:  [0 1]
+43 client:  [6 7]
+81 client:  [2 3]
+44 client:  [8 9]
+72 client:  [4 5]
+17 client:  [4 5]
+98 client:  [6 7]
+34 client:  [8 9]
+Round  27, Average loss 0.243
+Round  27, Average global accuracy 82.00
+Round  27, Average local accuracy 82.54
+98 client:  [6 7]
+36 client:  [2 3]
+12 client:  [4 5]
+88 client:  [6 7]
+44 client:  [8 9]
+13 client:  [6 7]
+77 client:  [4 5]
+91 client:  [2 3]
+34 client:  [8 9]
+27 client:  [4 5]
+Round  28, Average loss 0.217
+Round  28, Average global accuracy 84.00
+Round  28, Average local accuracy 83.97
+30 client:  [0 1]
+95 client:  [0 1]
+4 client:  [8 9]
+2 client:  [4 5]
+49 client:  [8 9]
+99 client:  [8 9]
+1 client:  [2 3]
+93 client:  [6 7]
+91 client:  [2 3]
+50 client:  [0 1]
+Round  29, Average loss 0.176
+Round  29, Average global accuracy 83.00
+Round  29, Average local accuracy 83.92
+53 client:  [6 7]
+27 client:  [4 5]
+48 client:  [6 7]
+34 client:  [8 9]
+61 client:  [2 3]
+33 client:  [6 7]
+12 client:  [4 5]
+20 client:  [0 1]
+64 client:  [8 9]
+88 client:  [6 7]
+Round  30, Average loss 0.181
+Round  30, Average global accuracy 85.00
+Round  30, Average local accuracy 85.80
+1 client:  [2 3]
+67 client:  [4 5]
+52 client:  [4 5]
+45 client:  [0 1]
+49 client:  [8 9]
+62 client:  [4 5]
+37 client:  [4 5]
+36 client:  [2 3]
+14 client:  [8 9]
+82 client:  [4 5]
+Round  31, Average loss 0.176
+Round  31, Average global accuracy 80.00
+Round  31, Average local accuracy 80.64
+55 client:  [0 1]
+35 client:  [0 1]
+87 client:  [4 5]
+22 client:  [4 5]
+17 client:  [4 5]
+85 client:  [0 1]
+78 client:  [6 7]
+10 client:  [0 1]
+27 client:  [4 5]
+29 client:  [8 9]
+Round  32, Average loss 0.121
+Round  32, Average global accuracy 82.00
+Round  32, Average local accuracy 82.06
+31 client:  [2 3]
+9 client:  [8 9]
+21 client:  [2 3]
+38 client:  [6 7]
+64 client:  [8 9]
+47 client:  [4 5]
+60 client:  [0 1]
+10 client:  [0 1]
+97 client:  [4 5]
+93 client:  [6 7]
+Round  33, Average loss 0.202
+Round  33, Average global accuracy 84.00
+Round  33, Average local accuracy 84.06
+70 client:  [0 1]
+63 client:  [6 7]
+72 client:  [4 5]
+13 client:  [6 7]
+77 client:  [4 5]
+28 client:  [6 7]
+71 client:  [2 3]
+25 client:  [0 1]
+2 client:  [4 5]
+27 client:  [4 5]
+Round  34, Average loss 0.189
+Round  34, Average global accuracy 82.00
+Round  34, Average local accuracy 81.54
+8 client:  [6 7]
+1 client:  [2 3]
+45 client:  [0 1]
+53 client:  [6 7]
+83 client:  [6 7]
+34 client:  [8 9]
+50 client:  [0 1]
+29 client:  [8 9]
+91 client:  [2 3]
+51 client:  [2 3]
+Round  35, Average loss 0.130
+Round  35, Average global accuracy 85.00
+Round  35, Average local accuracy 85.42
+60 client:  [0 1]
+24 client:  [8 9]
+3 client:  [6 7]
+91 client:  [2 3]
+59 client:  [8 9]
+81 client:  [2 3]
+0 client:  [0 1]
+72 client:  [4 5]
+15 client:  [0 1]
+50 client:  [0 1]
+Round  36, Average loss 0.157
+Round  36, Average global accuracy 84.00
+Round  36, Average local accuracy 83.88
+35 client:  [0 1]
+10 client:  [0 1]
+26 client:  [2 3]
+98 client:  [6 7]
+57 client:  [4 5]
+24 client:  [8 9]
+40 client:  [0 1]
+69 client:  [8 9]
+96 client:  [2 3]
+65 client:  [0 1]
+Round  37, Average loss 0.109
+Round  37, Average global accuracy 84.00
+Round  37, Average local accuracy 85.50
+44 client:  [8 9]
+13 client:  [6 7]
+3 client:  [6 7]
+48 client:  [6 7]
+69 client:  [8 9]
+67 client:  [4 5]
+63 client:  [6 7]
+76 client:  [2 3]
+50 client:  [0 1]
+74 client:  [8 9]
+Round  38, Average loss 0.203
+Round  38, Average global accuracy 86.00
+Round  38, Average local accuracy 87.10
+23 client:  [6 7]
+88 client:  [6 7]
+70 client:  [0 1]
+9 client:  [8 9]
+59 client:  [8 9]
+30 client:  [0 1]
+54 client:  [8 9]
+97 client:  [4 5]
+95 client:  [0 1]
+86 client:  [2 3]
+Round  39, Average loss 0.152
+Round  39, Average global accuracy 85.00
+Round  39, Average local accuracy 84.13
+64 client:  [8 9]
+3 client:  [6 7]
+63 client:  [6 7]
+73 client:  [6 7]
+59 client:  [8 9]
+67 client:  [4 5]
+46 client:  [2 3]
+43 client:  [6 7]
+87 client:  [4 5]
+32 client:  [4 5]
+Round  40, Average loss 0.176
+Round  40, Average global accuracy 84.00
+Round  40, Average local accuracy 84.36
+71 client:  [2 3]
+60 client:  [0 1]
+88 client:  [6 7]
+85 client:  [0 1]
+65 client:  [0 1]
+36 client:  [2 3]
+92 client:  [4 5]
+94 client:  [8 9]
+9 client:  [8 9]
+75 client:  [0 1]
+Round  41, Average loss 0.158
+Round  41, Average global accuracy 87.00
+Round  41, Average local accuracy 87.06
+77 client:  [4 5]
+1 client:  [2 3]
+82 client:  [4 5]
+56 client:  [2 3]
+5 client:  [0 1]
+12 client:  [4 5]
+96 client:  [2 3]
+78 client:  [6 7]
+21 client:  [2 3]
+69 client:  [8 9]
+Round  42, Average loss 0.142
+Round  42, Average global accuracy 83.00
+Round  42, Average local accuracy 84.33
+3 client:  [6 7]
+43 client:  [6 7]
+31 client:  [2 3]
+12 client:  [4 5]
+37 client:  [4 5]
+7 client:  [4 5]
+18 client:  [6 7]
+40 client:  [0 1]
+28 client:  [6 7]
+6 client:  [2 3]
+Round  43, Average loss 0.139
+Round  43, Average global accuracy 78.00
+Round  43, Average local accuracy 77.52
+63 client:  [6 7]
+57 client:  [4 5]
+46 client:  [2 3]
+52 client:  [4 5]
+98 client:  [6 7]
+69 client:  [8 9]
+0 client:  [0 1]
+36 client:  [2 3]
+71 client:  [2 3]
+54 client:  [8 9]
+Round  44, Average loss 0.221
+Round  44, Average global accuracy 78.00
+Round  44, Average local accuracy 78.98
+86 client:  [2 3]
+0 client:  [0 1]
+63 client:  [6 7]
+78 client:  [6 7]
+8 client:  [6 7]
+54 client:  [8 9]
+28 client:  [6 7]
+80 client:  [0 1]
+31 client:  [2 3]
+82 client:  [4 5]
+Round  45, Average loss 0.146
+Round  45, Average global accuracy 79.00
+Round  45, Average local accuracy 79.92
+44 client:  [8 9]
+54 client:  [8 9]
+86 client:  [2 3]
+71 client:  [2 3]
+33 client:  [6 7]
+36 client:  [2 3]
+26 client:  [2 3]
+29 client:  [8 9]
+10 client:  [0 1]
+74 client:  [8 9]
+Round  46, Average loss 0.195
+Round  46, Average global accuracy 81.00
+Round  46, Average local accuracy 83.86
+79 client:  [8 9]
+15 client:  [0 1]
+64 client:  [8 9]
+51 client:  [2 3]
+57 client:  [4 5]
+49 client:  [8 9]
+30 client:  [0 1]
+6 client:  [2 3]
+31 client:  [2 3]
+87 client:  [4 5]
+Round  47, Average loss 0.157
+Round  47, Average global accuracy 82.00
+Round  47, Average local accuracy 83.54
+53 client:  [6 7]
+67 client:  [4 5]
+50 client:  [0 1]
+28 client:  [6 7]
+74 client:  [8 9]
+88 client:  [6 7]
+66 client:  [2 3]
+12 client:  [4 5]
+40 client:  [0 1]
+54 client:  [8 9]
+Round  48, Average loss 0.121
+Round  48, Average global accuracy 86.00
+Round  48, Average local accuracy 86.59
+63 client:  [6 7]
+4 client:  [8 9]
+83 client:  [6 7]
+50 client:  [0 1]
+67 client:  [4 5]
+79 client:  [8 9]
+84 client:  [8 9]
+73 client:  [6 7]
+86 client:  [2 3]
+30 client:  [0 1]
+Round  49, Average loss 0.144
+Round  49, Average global accuracy 87.00
+Round  49, Average local accuracy 87.18
+7 client:  [4 5]
+4 client:  [8 9]
+60 client:  [0 1]
+30 client:  [0 1]
+71 client:  [2 3]
+76 client:  [2 3]
+52 client:  [4 5]
+84 client:  [8 9]
+29 client:  [8 9]
+46 client:  [2 3]
+Round  50, Average loss 0.174
+Round  50, Average global accuracy 84.00
+Round  50, Average local accuracy 85.34
+5 client:  [0 1]
+58 client:  [6 7]
+93 client:  [6 7]
+79 client:  [8 9]
+18 client:  [6 7]
+30 client:  [0 1]
+71 client:  [2 3]
+0 client:  [0 1]
+61 client:  [2 3]
+60 client:  [0 1]
+Round  51, Average loss 0.132
+Round  51, Average global accuracy 84.00
+Round  51, Average local accuracy 85.44
+90 client:  [0 1]
+24 client:  [8 9]
+44 client:  [8 9]
+23 client:  [6 7]
+25 client:  [0 1]
+30 client:  [0 1]
+35 client:  [0 1]
+37 client:  [4 5]
+9 client:  [8 9]
+60 client:  [0 1]
+Round  52, Average loss 0.170
+Round  52, Average global accuracy 83.00
+Round  52, Average local accuracy 84.37
+66 client:  [2 3]
+49 client:  [8 9]
+16 client:  [2 3]
+14 client:  [8 9]
+42 client:  [4 5]
+13 client:  [6 7]
+17 client:  [4 5]
+70 client:  [0 1]
+7 client:  [4 5]
+83 client:  [6 7]
+Round  53, Average loss 0.199
+Round  53, Average global accuracy 86.00
+Round  53, Average local accuracy 87.39
+58 client:  [6 7]
+59 client:  [8 9]
+46 client:  [2 3]
+45 client:  [0 1]
+79 client:  [8 9]
+73 client:  [6 7]
+47 client:  [4 5]
+14 client:  [8 9]
+1 client:  [2 3]
+36 client:  [2 3]
+Round  54, Average loss 0.200
+Round  54, Average global accuracy 85.00
+Round  54, Average local accuracy 86.91
+88 client:  [6 7]
+27 client:  [4 5]
+87 client:  [4 5]
+32 client:  [4 5]
+31 client:  [2 3]
+16 client:  [2 3]
+47 client:  [4 5]
+93 client:  [6 7]
+50 client:  [0 1]
+81 client:  [2 3]
+Round  55, Average loss 0.194
+Round  55, Average global accuracy 85.00
+Round  55, Average local accuracy 85.11
+73 client:  [6 7]
+63 client:  [6 7]
+3 client:  [6 7]
+84 client:  [8 9]
+54 client:  [8 9]
+8 client:  [6 7]
+40 client:  [0 1]
+88 client:  [6 7]
+45 client:  [0 1]
+70 client:  [0 1]
+Round  56, Average loss 0.166
+Round  56, Average global accuracy 85.00
+Round  56, Average local accuracy 85.01
+11 client:  [2 3]
+81 client:  [2 3]
+8 client:  [6 7]
+68 client:  [6 7]
+19 client:  [8 9]
+36 client:  [2 3]
+21 client:  [2 3]
+71 client:  [2 3]
+47 client:  [4 5]
+7 client:  [4 5]
+Round  57, Average loss 0.137
+Round  57, Average global accuracy 83.00
+Round  57, Average local accuracy 84.73
+91 client:  [2 3]
+41 client:  [2 3]
+24 client:  [8 9]
+69 client:  [8 9]
+13 client:  [6 7]
+87 client:  [4 5]
+54 client:  [8 9]
+85 client:  [0 1]
+6 client:  [2 3]
+30 client:  [0 1]
+Round  58, Average loss 0.187
+Round  58, Average global accuracy 85.00
+Round  58, Average local accuracy 87.29
+6 client:  [2 3]
+81 client:  [2 3]
+88 client:  [6 7]
+59 client:  [8 9]
+2 client:  [4 5]
+40 client:  [0 1]
+85 client:  [0 1]
+71 client:  [2 3]
+1 client:  [2 3]
+55 client:  [0 1]
+Round  59, Average loss 0.128
+Round  59, Average global accuracy 82.00
+Round  59, Average local accuracy 84.81
+71 client:  [2 3]
+84 client:  [8 9]
+7 client:  [4 5]
+73 client:  [6 7]
+87 client:  [4 5]
+56 client:  [2 3]
+40 client:  [0 1]
+86 client:  [2 3]
+46 client:  [2 3]
+19 client:  [8 9]
+Round  60, Average loss 0.173
+Round  60, Average global accuracy 81.00
+Round  60, Average local accuracy 84.19
+30 client:  [0 1]
+0 client:  [0 1]
+91 client:  [2 3]
+98 client:  [6 7]
+82 client:  [4 5]
+27 client:  [4 5]
+45 client:  [0 1]
+99 client:  [8 9]
+36 client:  [2 3]
+64 client:  [8 9]
+Round  61, Average loss 0.128
+Round  61, Average global accuracy 85.00
+Round  61, Average local accuracy 87.14
+61 client:  [2 3]
+96 client:  [2 3]
+92 client:  [4 5]
+22 client:  [4 5]
+84 client:  [8 9]
+56 client:  [2 3]
+10 client:  [0 1]
+89 client:  [8 9]
+35 client:  [0 1]
+90 client:  [0 1]
+Round  62, Average loss 0.190
+Round  62, Average global accuracy 84.00
+Round  62, Average local accuracy 86.84
+48 client:  [6 7]
+51 client:  [2 3]
+1 client:  [2 3]
+0 client:  [0 1]
+12 client:  [4 5]
+72 client:  [4 5]
+61 client:  [2 3]
+75 client:  [0 1]
+47 client:  [4 5]
+40 client:  [0 1]
+Round  63, Average loss 0.156
+Round  63, Average global accuracy 81.00
+Round  63, Average local accuracy 83.40
+55 client:  [0 1]
+6 client:  [2 3]
+95 client:  [0 1]
+79 client:  [8 9]
+68 client:  [6 7]
+49 client:  [8 9]
+33 client:  [6 7]
+0 client:  [0 1]
+81 client:  [2 3]
+2 client:  [4 5]
+Round  64, Average loss 0.197
+Round  64, Average global accuracy 84.00
+Round  64, Average local accuracy 85.40
+44 client:  [8 9]
+6 client:  [2 3]
+75 client:  [0 1]
+96 client:  [2 3]
+24 client:  [8 9]
+94 client:  [8 9]
+76 client:  [2 3]
+84 client:  [8 9]
+72 client:  [4 5]
+58 client:  [6 7]
+Round  65, Average loss 0.271
+Round  65, Average global accuracy 84.00
+Round  65, Average local accuracy 86.32
+14 client:  [8 9]
+90 client:  [0 1]
+64 client:  [8 9]
+57 client:  [4 5]
+49 client:  [8 9]
+24 client:  [8 9]
+58 client:  [6 7]
+93 client:  [6 7]
+42 client:  [4 5]
+45 client:  [0 1]
+Round  66, Average loss 0.203
+Round  66, Average global accuracy 86.00
+Round  66, Average local accuracy 87.17
+99 client:  [8 9]
+89 client:  [8 9]
+52 client:  [4 5]
+90 client:  [0 1]
+76 client:  [2 3]
+71 client:  [2 3]
+58 client:  [6 7]
+10 client:  [0 1]
+73 client:  [6 7]
+36 client:  [2 3]
+Round  67, Average loss 0.134
+Round  67, Average global accuracy 84.00
+Round  67, Average local accuracy 85.06
+5 client:  [0 1]
+37 client:  [4 5]
+79 client:  [8 9]
+17 client:  [4 5]
+66 client:  [2 3]
+53 client:  [6 7]
+14 client:  [8 9]
+42 client:  [4 5]
+46 client:  [2 3]
+69 client:  [8 9]
+Round  68, Average loss 0.237
+Round  68, Average global accuracy 85.00
+Round  68, Average local accuracy 87.34
+41 client:  [2 3]
+67 client:  [4 5]
+22 client:  [4 5]
+83 client:  [6 7]
+71 client:  [2 3]
+96 client:  [2 3]
+18 client:  [6 7]
+58 client:  [6 7]
+52 client:  [4 5]
+17 client:  [4 5]
+Round  69, Average loss 0.192
+Round  69, Average global accuracy 84.00
+Round  69, Average local accuracy 84.62
+79 client:  [8 9]
+77 client:  [4 5]
+82 client:  [4 5]
+7 client:  [4 5]
+43 client:  [6 7]
+83 client:  [6 7]
+34 client:  [8 9]
+26 client:  [2 3]
+50 client:  [0 1]
+93 client:  [6 7]
+Round  70, Average loss 0.157
+Round  70, Average global accuracy 87.00
+Round  70, Average local accuracy 87.50
+36 client:  [2 3]
+53 client:  [6 7]
+4 client:  [8 9]
+77 client:  [4 5]
+97 client:  [4 5]
+14 client:  [8 9]
+10 client:  [0 1]
+74 client:  [8 9]
+37 client:  [4 5]
+90 client:  [0 1]
+Round  71, Average loss 0.196
+Round  71, Average global accuracy 88.00
+Round  71, Average local accuracy 89.10
+34 client:  [8 9]
+75 client:  [0 1]
+81 client:  [2 3]
+15 client:  [0 1]
+18 client:  [6 7]
+7 client:  [4 5]
+55 client:  [0 1]
+22 client:  [4 5]
+84 client:  [8 9]
+17 client:  [4 5]
+Round  72, Average loss 0.194
+Round  72, Average global accuracy 88.00
+Round  72, Average local accuracy 89.42
+83 client:  [6 7]
+78 client:  [6 7]
+10 client:  [0 1]
+70 client:  [0 1]
+96 client:  [2 3]
+19 client:  [8 9]
+30 client:  [0 1]
+26 client:  [2 3]
+54 client:  [8 9]
+94 client:  [8 9]
+Round  73, Average loss 0.071
+Round  73, Average global accuracy 86.00
+Round  73, Average local accuracy 87.60
+31 client:  [2 3]
+15 client:  [0 1]
+49 client:  [8 9]
+62 client:  [4 5]
+12 client:  [4 5]
+9 client:  [8 9]
+17 client:  [4 5]
+76 client:  [2 3]
+85 client:  [0 1]
+98 client:  [6 7]
+Round  74, Average loss 0.202
+Round  74, Average global accuracy 87.00
+Round  74, Average local accuracy 88.20
+99 client:  [8 9]
+93 client:  [6 7]
+5 client:  [0 1]
+33 client:  [6 7]
+51 client:  [2 3]
+95 client:  [0 1]
+14 client:  [8 9]
+78 client:  [6 7]
+10 client:  [0 1]
+35 client:  [0 1]
+Round  75, Average loss 0.107
+Round  75, Average global accuracy 87.00
+Round  75, Average local accuracy 87.92
+58 client:  [6 7]
+64 client:  [8 9]
+26 client:  [2 3]
+79 client:  [8 9]
+97 client:  [4 5]
+80 client:  [0 1]
+13 client:  [6 7]
+1 client:  [2 3]
+84 client:  [8 9]
+29 client:  [8 9]
+Round  76, Average loss 0.144
+Round  76, Average global accuracy 84.00
+Round  76, Average local accuracy 84.39
+99 client:  [8 9]
+47 client:  [4 5]
+36 client:  [2 3]
+31 client:  [2 3]
+59 client:  [8 9]
+90 client:  [0 1]
+33 client:  [6 7]
+27 client:  [4 5]
+60 client:  [0 1]
+87 client:  [4 5]
+Round  77, Average loss 0.171
+Round  77, Average global accuracy 86.00
+Round  77, Average local accuracy 87.52
+51 client:  [2 3]
+33 client:  [6 7]
+3 client:  [6 7]
+24 client:  [8 9]
+41 client:  [2 3]
+88 client:  [6 7]
+53 client:  [6 7]
+23 client:  [6 7]
+72 client:  [4 5]
+97 client:  [4 5]
+Round  78, Average loss 0.203
+Round  78, Average global accuracy 88.00
+Round  78, Average local accuracy 89.12
+56 client:  [2 3]
+37 client:  [4 5]
+72 client:  [4 5]
+40 client:  [0 1]
+84 client:  [8 9]
+98 client:  [6 7]
+91 client:  [2 3]
+59 client:  [8 9]
+8 client:  [6 7]
+64 client:  [8 9]
+Round  79, Average loss 0.138
+Round  79, Average global accuracy 88.00
+Round  79, Average local accuracy 89.20
+18 client:  [6 7]
+49 client:  [8 9]
+62 client:  [4 5]
+43 client:  [6 7]
+69 client:  [8 9]
+93 client:  [6 7]
+45 client:  [0 1]
+38 client:  [6 7]
+89 client:  [8 9]
+2 client:  [4 5]
+Round  80, Average loss 0.232
+Round  80, Average global accuracy 88.00
+Round  80, Average local accuracy 88.43
+7 client:  [4 5]
+54 client:  [8 9]
+84 client:  [8 9]
+41 client:  [2 3]
+71 client:  [2 3]
+15 client:  [0 1]
+87 client:  [4 5]
+47 client:  [4 5]
+49 client:  [8 9]
+85 client:  [0 1]
+Round  81, Average loss 0.173
+Round  81, Average global accuracy 88.00
+Round  81, Average local accuracy 88.71
+55 client:  [0 1]
+4 client:  [8 9]
+18 client:  [6 7]
+88 client:  [6 7]
+22 client:  [4 5]
+70 client:  [0 1]
+86 client:  [2 3]
+25 client:  [0 1]
+84 client:  [8 9]
+63 client:  [6 7]
+Round  82, Average loss 0.171
+Round  82, Average global accuracy 88.00
+Round  82, Average local accuracy 87.95
+2 client:  [4 5]
+83 client:  [6 7]
+62 client:  [4 5]
+5 client:  [0 1]
+56 client:  [2 3]
+75 client:  [0 1]
+82 client:  [4 5]
+26 client:  [2 3]
+66 client:  [2 3]
+72 client:  [4 5]
+Round  83, Average loss 0.159
+Round  83, Average global accuracy 83.00
+Round  83, Average local accuracy 84.81
+94 client:  [8 9]
+30 client:  [0 1]
+62 client:  [4 5]
+46 client:  [2 3]
+33 client:  [6 7]
+45 client:  [0 1]
+28 client:  [6 7]
+87 client:  [4 5]
+61 client:  [2 3]
+68 client:  [6 7]
+Round  84, Average loss 0.159
+Round  84, Average global accuracy 85.00
+Round  84, Average local accuracy 86.13
+40 client:  [0 1]
+59 client:  [8 9]
+91 client:  [2 3]
+76 client:  [2 3]
+53 client:  [6 7]
+42 client:  [4 5]
+85 client:  [0 1]
+77 client:  [4 5]
+31 client:  [2 3]
+10 client:  [0 1]
+Round  85, Average loss 0.201
+Round  85, Average global accuracy 85.00
+Round  85, Average local accuracy 87.55
+56 client:  [2 3]
+49 client:  [8 9]
+97 client:  [4 5]
+32 client:  [4 5]
+61 client:  [2 3]
+50 client:  [0 1]
+81 client:  [2 3]
+73 client:  [6 7]
+60 client:  [0 1]
+47 client:  [4 5]
+Round  86, Average loss 0.203
+Round  86, Average global accuracy 83.00
+Round  86, Average local accuracy 84.33
+63 client:  [6 7]
+85 client:  [0 1]
+27 client:  [4 5]
+25 client:  [0 1]
+92 client:  [4 5]
+98 client:  [6 7]
+72 client:  [4 5]
+21 client:  [2 3]
+66 client:  [2 3]
+70 client:  [0 1]
+Round  87, Average loss 0.134
+Round  87, Average global accuracy 80.00
+Round  87, Average local accuracy 81.24
+1 client:  [2 3]
+60 client:  [0 1]
+41 client:  [2 3]
+96 client:  [2 3]
+14 client:  [8 9]
+42 client:  [4 5]
+48 client:  [6 7]
+46 client:  [2 3]
+43 client:  [6 7]
+79 client:  [8 9]
+Round  88, Average loss 0.201
+Round  88, Average global accuracy 85.00
+Round  88, Average local accuracy 86.70
+93 client:  [6 7]
+18 client:  [6 7]
+57 client:  [4 5]
+85 client:  [0 1]
+32 client:  [4 5]
+63 client:  [6 7]
+22 client:  [4 5]
+23 client:  [6 7]
+72 client:  [4 5]
+29 client:  [8 9]
+Round  89, Average loss 0.152
+Round  89, Average global accuracy 85.00
+Round  89, Average local accuracy 85.54
+60 client:  [0 1]
+66 client:  [2 3]
+35 client:  [0 1]
+69 client:  [8 9]
+59 client:  [8 9]
+92 client:  [4 5]
+64 client:  [8 9]
+55 client:  [0 1]
+19 client:  [8 9]
+82 client:  [4 5]
+Round  90, Average loss 0.137
+Round  90, Average global accuracy 86.00
+Round  90, Average local accuracy 87.48
+31 client:  [2 3]
+0 client:  [0 1]
+92 client:  [4 5]
+22 client:  [4 5]
+95 client:  [0 1]
+20 client:  [0 1]
+48 client:  [6 7]
+66 client:  [2 3]
+17 client:  [4 5]
+49 client:  [8 9]
+Round  91, Average loss 0.179
+Round  91, Average global accuracy 86.00
+Round  91, Average local accuracy 87.70
+19 client:  [8 9]
+75 client:  [0 1]
+66 client:  [2 3]
+22 client:  [4 5]
+35 client:  [0 1]
+25 client:  [0 1]
+17 client:  [4 5]
+56 client:  [2 3]
+48 client:  [6 7]
+31 client:  [2 3]
+Round  92, Average loss 0.165
+Round  92, Average global accuracy 84.00
+Round  92, Average local accuracy 86.71
+15 client:  [0 1]
+64 client:  [8 9]
+26 client:  [2 3]
+99 client:  [8 9]
+93 client:  [6 7]
+72 client:  [4 5]
+6 client:  [2 3]
+83 client:  [6 7]
+92 client:  [4 5]
+28 client:  [6 7]
+Round  93, Average loss 0.107
+Round  93, Average global accuracy 88.00
+Round  93, Average local accuracy 88.97
+15 client:  [0 1]
+94 client:  [8 9]
+86 client:  [2 3]
+20 client:  [0 1]
+13 client:  [6 7]
+32 client:  [4 5]
+89 client:  [8 9]
+40 client:  [0 1]
+23 client:  [6 7]
+80 client:  [0 1]
+Round  94, Average loss 0.122
+Round  94, Average global accuracy 89.00
+Round  94, Average local accuracy 89.57
+88 client:  [6 7]
+87 client:  [4 5]
+97 client:  [4 5]
+39 client:  [8 9]
+99 client:  [8 9]
+57 client:  [4 5]
+36 client:  [2 3]
+83 client:  [6 7]
+52 client:  [4 5]
+95 client:  [0 1]
+Round  95, Average loss 0.111
+Round  95, Average global accuracy 87.00
+Round  95, Average local accuracy 87.20
+92 client:  [4 5]
+13 client:  [6 7]
+21 client:  [2 3]
+93 client:  [6 7]
+55 client:  [0 1]
+62 client:  [4 5]
+49 client:  [8 9]
+61 client:  [2 3]
+2 client:  [4 5]
+66 client:  [2 3]
+Round  96, Average loss 0.188
+Round  96, Average global accuracy 87.00
+Round  96, Average local accuracy 87.23
+49 client:  [8 9]
+3 client:  [6 7]
+72 client:  [4 5]
+30 client:  [0 1]
+76 client:  [2 3]
+79 client:  [8 9]
+22 client:  [4 5]
+14 client:  [8 9]
+78 client:  [6 7]
+46 client:  [2 3]
+Round  97, Average loss 0.217
+Round  97, Average global accuracy 88.00
+Round  97, Average local accuracy 89.45
+42 client:  [4 5]
+67 client:  [4 5]
+72 client:  [4 5]
+86 client:  [2 3]
+91 client:  [2 3]
+88 client:  [6 7]
+56 client:  [2 3]
+32 client:  [4 5]
+16 client:  [2 3]
+52 client:  [4 5]
+Round  98, Average loss 0.178
+Round  98, Average global accuracy 83.00
+Round  98, Average local accuracy 83.17
+90 client:  [0 1]
+3 client:  [6 7]
+73 client:  [6 7]
+5 client:  [0 1]
+20 client:  [0 1]
+17 client:  [4 5]
+76 client:  [2 3]
+98 client:  [6 7]
+68 client:  [6 7]
+1 client:  [2 3]
+Round  99, Average loss 0.159
+Round  99, Average global accuracy 83.00
+Round  99, Average local accuracy 82.92
+80 client:  [0 1]
+68 client:  [6 7]
+64 client:  [8 9]
+66 client:  [2 3]
+70 client:  [0 1]
+65 client:  [0 1]
+57 client:  [4 5]
+3 client:  [6 7]
+86 client:  [2 3]
+42 client:  [4 5]
+Round 100, Average loss 0.150
+Round 100, Average global accuracy 84.00
+Round 100, Average local accuracy 84.95
+53 client:  [6 7]
+57 client:  [4 5]
+87 client:  [4 5]
+71 client:  [2 3]
+68 client:  [6 7]
+35 client:  [0 1]
+51 client:  [2 3]
+83 client:  [6 7]
+58 client:  [6 7]
+0 client:  [0 1]
+Round 101, Average loss 0.106
+Round 101, Average global accuracy 80.00
+Round 101, Average local accuracy 80.05
+2 client:  [4 5]
+14 client:  [8 9]
+35 client:  [0 1]
+61 client:  [2 3]
+17 client:  [4 5]
+26 client:  [2 3]
+63 client:  [6 7]
+30 client:  [0 1]
+38 client:  [6 7]
+50 client:  [0 1]
+Round 102, Average loss 0.177
+Round 102, Average global accuracy 81.00
+Round 102, Average local accuracy 81.51
+86 client:  [2 3]
+75 client:  [0 1]
+40 client:  [0 1]
+42 client:  [4 5]
+90 client:  [0 1]
+68 client:  [6 7]
+36 client:  [2 3]
+62 client:  [4 5]
+24 client:  [8 9]
+69 client:  [8 9]
+Round 103, Average loss 0.244
+Round 103, Average global accuracy 85.00
+Round 103, Average local accuracy 86.06
+31 client:  [2 3]
+90 client:  [0 1]
+95 client:  [0 1]
+52 client:  [4 5]
+82 client:  [4 5]
+60 client:  [0 1]
+75 client:  [0 1]
+15 client:  [0 1]
+74 client:  [8 9]
+53 client:  [6 7]
+Round 104, Average loss 0.153
+Round 104, Average global accuracy 86.00
+Round 104, Average local accuracy 86.76
+38 client:  [6 7]
+90 client:  [0 1]
+65 client:  [0 1]
+22 client:  [4 5]
+61 client:  [2 3]
+78 client:  [6 7]
+15 client:  [0 1]
+10 client:  [0 1]
+43 client:  [6 7]
+91 client:  [2 3]
+Round 105, Average loss 0.159
+Round 105, Average global accuracy 85.00
+Round 105, Average local accuracy 86.08
+6 client:  [2 3]
+62 client:  [4 5]
+91 client:  [2 3]
+76 client:  [2 3]
+32 client:  [4 5]
+90 client:  [0 1]
+49 client:  [8 9]
+75 client:  [0 1]
+36 client:  [2 3]
+9 client:  [8 9]
+Round 106, Average loss 0.250
+Round 106, Average global accuracy 84.00
+Round 106, Average local accuracy 86.03
+87 client:  [4 5]
+63 client:  [6 7]
+74 client:  [8 9]
+80 client:  [0 1]
+66 client:  [2 3]
+97 client:  [4 5]
+75 client:  [0 1]
+17 client:  [4 5]
+59 client:  [8 9]
+38 client:  [6 7]
+Round 107, Average loss 0.202
+Round 107, Average global accuracy 86.00
+Round 107, Average local accuracy 88.09
+34 client:  [8 9]
+97 client:  [4 5]
+62 client:  [4 5]
+39 client:  [8 9]
+10 client:  [0 1]
+52 client:  [4 5]
+72 client:  [4 5]
+69 client:  [8 9]
+29 client:  [8 9]
+80 client:  [0 1]
+Round 108, Average loss 0.192
+Round 108, Average global accuracy 87.00
+Round 108, Average local accuracy 87.80
+29 client:  [8 9]
+24 client:  [8 9]
+64 client:  [8 9]
+44 client:  [8 9]
+65 client:  [0 1]
+15 client:  [0 1]
+79 client:  [8 9]
+14 client:  [8 9]
+47 client:  [4 5]
+5 client:  [0 1]
+Round 109, Average loss 0.133
+Round 109, Average global accuracy 80.00
+Round 109, Average local accuracy 79.17
+32 client:  [4 5]
+0 client:  [0 1]
+20 client:  [0 1]
+61 client:  [2 3]
+34 client:  [8 9]
+41 client:  [2 3]
+36 client:  [2 3]
+60 client:  [0 1]
+75 client:  [0 1]
+78 client:  [6 7]
+Round 110, Average loss 0.153
+Round 110, Average global accuracy 85.00
+Round 110, Average local accuracy 85.32
+61 client:  [2 3]
+71 client:  [2 3]
+54 client:  [8 9]
+62 client:  [4 5]
+92 client:  [4 5]
+39 client:  [8 9]
+90 client:  [0 1]
+21 client:  [2 3]
+20 client:  [0 1]
+58 client:  [6 7]
+Round 111, Average loss 0.189
+Round 111, Average global accuracy 86.00
+Round 111, Average local accuracy 87.97
+95 client:  [0 1]
+0 client:  [0 1]
+37 client:  [4 5]
+41 client:  [2 3]
+14 client:  [8 9]
+18 client:  [6 7]
+4 client:  [8 9]
+34 client:  [8 9]
+42 client:  [4 5]
+2 client:  [4 5]
+Round 112, Average loss 0.163
+Round 112, Average global accuracy 86.00
+Round 112, Average local accuracy 87.36
+52 client:  [4 5]
+11 client:  [2 3]
+5 client:  [0 1]
+69 client:  [8 9]
+57 client:  [4 5]
+56 client:  [2 3]
+1 client:  [2 3]
+59 client:  [8 9]
+63 client:  [6 7]
+40 client:  [0 1]
+Round 113, Average loss 0.157
+Round 113, Average global accuracy 86.00
+Round 113, Average local accuracy 87.53
+54 client:  [8 9]
+67 client:  [4 5]
+9 client:  [8 9]
+95 client:  [0 1]
+25 client:  [0 1]
+49 client:  [8 9]
+21 client:  [2 3]
+17 client:  [4 5]
+89 client:  [8 9]
+27 client:  [4 5]
+Round 114, Average loss 0.163
+Round 114, Average global accuracy 86.00
+Round 114, Average local accuracy 87.16
+52 client:  [4 5]
+5 client:  [0 1]
+4 client:  [8 9]
+17 client:  [4 5]
+1 client:  [2 3]
+25 client:  [0 1]
+65 client:  [0 1]
+86 client:  [2 3]
+36 client:  [2 3]
+29 client:  [8 9]
+Round 115, Average loss 0.140
+Round 115, Average global accuracy 83.00
+Round 115, Average local accuracy 84.29
+10 client:  [0 1]
+93 client:  [6 7]
+77 client:  [4 5]
+28 client:  [6 7]
+42 client:  [4 5]
+62 client:  [4 5]
+12 client:  [4 5]
+72 client:  [4 5]
+49 client:  [8 9]
+78 client:  [6 7]
+Round 116, Average loss 0.197
+Round 116, Average global accuracy 87.00
+Round 116, Average local accuracy 87.69
+38 client:  [6 7]
+18 client:  [6 7]
+67 client:  [4 5]
+53 client:  [6 7]
+95 client:  [0 1]
+66 client:  [2 3]
+22 client:  [4 5]
+87 client:  [4 5]
+37 client:  [4 5]
+11 client:  [2 3]
+Round 117, Average loss 0.174
+Round 117, Average global accuracy 84.00
+Round 117, Average local accuracy 85.28
+23 client:  [6 7]
+36 client:  [2 3]
+0 client:  [0 1]
+24 client:  [8 9]
+4 client:  [8 9]
+9 client:  [8 9]
+32 client:  [4 5]
+89 client:  [8 9]
+54 client:  [8 9]
+95 client:  [0 1]
+Round 118, Average loss 0.168
+Round 118, Average global accuracy 87.00
+Round 118, Average local accuracy 88.25
+82 client:  [4 5]
+19 client:  [8 9]
+12 client:  [4 5]
+36 client:  [2 3]
+97 client:  [4 5]
+90 client:  [0 1]
+55 client:  [0 1]
+56 client:  [2 3]
+67 client:  [4 5]
+89 client:  [8 9]
+Round 119, Average loss 0.115
+Round 119, Average global accuracy 86.00
+Round 119, Average local accuracy 86.77
+0 client:  [0 1]
+20 client:  [0 1]
+31 client:  [2 3]
+48 client:  [6 7]
+70 client:  [0 1]
+71 client:  [2 3]
+50 client:  [0 1]
+67 client:  [4 5]
+43 client:  [6 7]
+28 client:  [6 7]
+Round 120, Average loss 0.141
+Round 120, Average global accuracy 87.00
+Round 120, Average local accuracy 87.39
+1 client:  [2 3]
+35 client:  [0 1]
+15 client:  [0 1]
+22 client:  [4 5]
+74 client:  [8 9]
+47 client:  [4 5]
+0 client:  [0 1]
+48 client:  [6 7]
+2 client:  [4 5]
+86 client:  [2 3]
+Round 121, Average loss 0.149
+Round 121, Average global accuracy 87.00
+Round 121, Average local accuracy 88.29
+17 client:  [4 5]
+37 client:  [4 5]
+22 client:  [4 5]
+82 client:  [4 5]
+36 client:  [2 3]
+97 client:  [4 5]
+88 client:  [6 7]
+49 client:  [8 9]
+75 client:  [0 1]
+34 client:  [8 9]
+Round 122, Average loss 0.194
+Round 122, Average global accuracy 87.00
+Round 122, Average local accuracy 87.30
+31 client:  [2 3]
+5 client:  [0 1]
+33 client:  [6 7]
+90 client:  [0 1]
+30 client:  [0 1]
+4 client:  [8 9]
+96 client:  [2 3]
+58 client:  [6 7]
+81 client:  [2 3]
+50 client:  [0 1]
+Round 123, Average loss 0.171
+Round 123, Average global accuracy 88.00
+Round 123, Average local accuracy 89.07
+51 client:  [2 3]
+20 client:  [0 1]
+8 client:  [6 7]
+41 client:  [2 3]
+48 client:  [6 7]
+14 client:  [8 9]
+95 client:  [0 1]
+29 client:  [8 9]
+58 client:  [6 7]
+37 client:  [4 5]
+Round 124, Average loss 0.159
+Round 124, Average global accuracy 88.00
+Round 124, Average local accuracy 89.13
+81 client:  [2 3]
+2 client:  [4 5]
+37 client:  [4 5]
+47 client:  [4 5]
+59 client:  [8 9]
+79 client:  [8 9]
+9 client:  [8 9]
+28 client:  [6 7]
+73 client:  [6 7]
+29 client:  [8 9]
+Round 125, Average loss 0.165
+Round 125, Average global accuracy 89.00
+Round 125, Average local accuracy 88.79
+40 client:  [0 1]
+66 client:  [2 3]
+86 client:  [2 3]
+91 client:  [2 3]
+94 client:  [8 9]
+32 client:  [4 5]
+48 client:  [6 7]
+45 client:  [0 1]
+27 client:  [4 5]
+1 client:  [2 3]
+Round 126, Average loss 0.165
+Round 126, Average global accuracy 88.00
+Round 126, Average local accuracy 89.75
+51 client:  [2 3]
+92 client:  [4 5]
+12 client:  [4 5]
+76 client:  [2 3]
+13 client:  [6 7]
+45 client:  [0 1]
+8 client:  [6 7]
+33 client:  [6 7]
+1 client:  [2 3]
+96 client:  [2 3]
+Round 127, Average loss 0.113
+Round 127, Average global accuracy 85.00
+Round 127, Average local accuracy 86.65
+82 client:  [4 5]
+90 client:  [0 1]
+11 client:  [2 3]
+0 client:  [0 1]
+40 client:  [0 1]
+36 client:  [2 3]
+38 client:  [6 7]
+98 client:  [6 7]
+71 client:  [2 3]
+56 client:  [2 3]
+Round 128, Average loss 0.153
+Round 128, Average global accuracy 82.00
+Round 128, Average local accuracy 84.52
+15 client:  [0 1]
+60 client:  [0 1]
+91 client:  [2 3]
+19 client:  [8 9]
+68 client:  [6 7]
+43 client:  [6 7]
+99 client:  [8 9]
+44 client:  [8 9]
+96 client:  [2 3]
+71 client:  [2 3]
+Round 129, Average loss 0.155
+Round 129, Average global accuracy 86.00
+Round 129, Average local accuracy 88.59
+51 client:  [2 3]
+89 client:  [8 9]
+13 client:  [6 7]
+66 client:  [2 3]
+10 client:  [0 1]
+79 client:  [8 9]
+15 client:  [0 1]
+57 client:  [4 5]
+98 client:  [6 7]
+28 client:  [6 7]
+Round 130, Average loss 0.100
+Round 130, Average global accuracy 87.00
+Round 130, Average local accuracy 89.39
+19 client:  [8 9]
+7 client:  [4 5]
+91 client:  [2 3]
+63 client:  [6 7]
+84 client:  [8 9]
+36 client:  [2 3]
+71 client:  [2 3]
+97 client:  [4 5]
+33 client:  [6 7]
+89 client:  [8 9]
+Round 131, Average loss 0.170
+Round 131, Average global accuracy 87.00
+Round 131, Average local accuracy 88.92
+43 client:  [6 7]
+39 client:  [8 9]
+95 client:  [0 1]
+40 client:  [0 1]
+83 client:  [6 7]
+50 client:  [0 1]
+72 client:  [4 5]
+42 client:  [4 5]
+90 client:  [0 1]
+73 client:  [6 7]
+Round 132, Average loss 0.200
+Round 132, Average global accuracy 88.00
+Round 132, Average local accuracy 89.39
+14 client:  [8 9]
+85 client:  [0 1]
+43 client:  [6 7]
+86 client:  [2 3]
+20 client:  [0 1]
+57 client:  [4 5]
+33 client:  [6 7]
+62 client:  [4 5]
+60 client:  [0 1]
+36 client:  [2 3]
+Round 133, Average loss 0.175
+Round 133, Average global accuracy 88.00
+Round 133, Average local accuracy 89.30
+2 client:  [4 5]
+23 client:  [6 7]
+79 client:  [8 9]
+69 client:  [8 9]
+97 client:  [4 5]
+83 client:  [6 7]
+0 client:  [0 1]
+75 client:  [0 1]
+96 client:  [2 3]
+11 client:  [2 3]
+Round 134, Average loss 0.161
+Round 134, Average global accuracy 88.00
+Round 134, Average local accuracy 89.11
+46 client:  [2 3]
+55 client:  [0 1]
+40 client:  [0 1]
+24 client:  [8 9]
+68 client:  [6 7]
+35 client:  [0 1]
+78 client:  [6 7]
+14 client:  [8 9]
+30 client:  [0 1]
+39 client:  [8 9]
+Round 135, Average loss 0.172
+Round 135, Average global accuracy 87.00
+Round 135, Average local accuracy 87.51
+1 client:  [2 3]
+52 client:  [4 5]
+74 client:  [8 9]
+96 client:  [2 3]
+90 client:  [0 1]
+35 client:  [0 1]
+24 client:  [8 9]
+36 client:  [2 3]
+82 client:  [4 5]
+94 client:  [8 9]
+Round 136, Average loss 0.148
+Round 136, Average global accuracy 87.00
+Round 136, Average local accuracy 88.75
+75 client:  [0 1]
+15 client:  [0 1]
+40 client:  [0 1]
+74 client:  [8 9]
+34 client:  [8 9]
+48 client:  [6 7]
+60 client:  [0 1]
+90 client:  [0 1]
+16 client:  [2 3]
+85 client:  [0 1]
+Round 137, Average loss 0.118
+Round 137, Average global accuracy 85.00
+Round 137, Average local accuracy 86.52
+13 client:  [6 7]
+69 client:  [8 9]
+35 client:  [0 1]
+45 client:  [0 1]
+50 client:  [0 1]
+80 client:  [0 1]
+7 client:  [4 5]
+40 client:  [0 1]
+9 client:  [8 9]
+48 client:  [6 7]
+Round 138, Average loss 0.128
+Round 138, Average global accuracy 86.00
+Round 138, Average local accuracy 87.35
+16 client:  [2 3]
+95 client:  [0 1]
+13 client:  [6 7]
+73 client:  [6 7]
+76 client:  [2 3]
+75 client:  [0 1]
+48 client:  [6 7]
+64 client:  [8 9]
+86 client:  [2 3]
+58 client:  [6 7]
+Round 139, Average loss 0.171
+Round 139, Average global accuracy 87.00
+Round 139, Average local accuracy 88.40
+42 client:  [4 5]
+7 client:  [4 5]
+99 client:  [8 9]
+67 client:  [4 5]
+52 client:  [4 5]
+56 client:  [2 3]
+95 client:  [0 1]
+71 client:  [2 3]
+0 client:  [0 1]
+2 client:  [4 5]
+Round 140, Average loss 0.159
+Round 140, Average global accuracy 89.00
+Round 140, Average local accuracy 89.53
+37 client:  [4 5]
+76 client:  [2 3]
+32 client:  [4 5]
+78 client:  [6 7]
+24 client:  [8 9]
+27 client:  [4 5]
+84 client:  [8 9]
+34 client:  [8 9]
+92 client:  [4 5]
+38 client:  [6 7]
+Round 141, Average loss 0.212
+Round 141, Average global accuracy 88.00
+Round 141, Average local accuracy 88.19
+79 client:  [8 9]
+44 client:  [8 9]
+13 client:  [6 7]
+85 client:  [0 1]
+50 client:  [0 1]
+22 client:  [4 5]
+48 client:  [6 7]
+69 client:  [8 9]
+99 client:  [8 9]
+66 client:  [2 3]
+Round 142, Average loss 0.174
+Round 142, Average global accuracy 89.00
+Round 142, Average local accuracy 89.69
+57 client:  [4 5]
+83 client:  [6 7]
+11 client:  [2 3]
+8 client:  [6 7]
+24 client:  [8 9]
+91 client:  [2 3]
+1 client:  [2 3]
+33 client:  [6 7]
+23 client:  [6 7]
+81 client:  [2 3]
+Round 143, Average loss 0.163
+Round 143, Average global accuracy 89.00
+Round 143, Average local accuracy 89.60
+63 client:  [6 7]
+86 client:  [2 3]
+7 client:  [4 5]
+62 client:  [4 5]
+59 client:  [8 9]
+30 client:  [0 1]
+27 client:  [4 5]
+46 client:  [2 3]
+67 client:  [4 5]
+0 client:  [0 1]
+Round 144, Average loss 0.209
+Round 144, Average global accuracy 89.00
+Round 144, Average local accuracy 88.92
+73 client:  [6 7]
+24 client:  [8 9]
+53 client:  [6 7]
+7 client:  [4 5]
+6 client:  [2 3]
+96 client:  [2 3]
+43 client:  [6 7]
+34 client:  [8 9]
+66 client:  [2 3]
+0 client:  [0 1]
+Round 145, Average loss 0.153
+Round 145, Average global accuracy 89.00
+Round 145, Average local accuracy 90.53
+41 client:  [2 3]
+2 client:  [4 5]
+95 client:  [0 1]
+90 client:  [0 1]
+86 client:  [2 3]
+5 client:  [0 1]
+50 client:  [0 1]
+62 client:  [4 5]
+91 client:  [2 3]
+3 client:  [6 7]
+Round 146, Average loss 0.183
+Round 146, Average global accuracy 88.00
+Round 146, Average local accuracy 88.99
+37 client:  [4 5]
+86 client:  [2 3]
+76 client:  [2 3]
+53 client:  [6 7]
+18 client:  [6 7]
+92 client:  [4 5]
+95 client:  [0 1]
+59 client:  [8 9]
+72 client:  [4 5]
+4 client:  [8 9]
+Round 147, Average loss 0.160
+Round 147, Average global accuracy 88.00
+Round 147, Average local accuracy 89.63
+84 client:  [8 9]
+69 client:  [8 9]
+99 client:  [8 9]
+6 client:  [2 3]
+64 client:  [8 9]
+74 client:  [8 9]
+96 client:  [2 3]
+63 client:  [6 7]
+65 client:  [0 1]
+44 client:  [8 9]
+Round 148, Average loss 0.233
+Round 148, Average global accuracy 87.00
+Round 148, Average local accuracy 88.14
+99 client:  [8 9]
+31 client:  [2 3]
+3 client:  [6 7]
+24 client:  [8 9]
+60 client:  [0 1]
+84 client:  [8 9]
+49 client:  [8 9]
+90 client:  [0 1]
+79 client:  [8 9]
+12 client:  [4 5]
+Round 149, Average loss 0.157
+Round 149, Average global accuracy 85.00
+Round 149, Average local accuracy 87.05
+80 client:  [0 1]
+46 client:  [2 3]
+90 client:  [0 1]
+65 client:  [0 1]
+30 client:  [0 1]
+98 client:  [6 7]
+16 client:  [2 3]
+52 client:  [4 5]
+97 client:  [4 5]
+19 client:  [8 9]
+Round 150, Average loss 0.196
+Round 150, Average global accuracy 88.00
+Round 150, Average local accuracy 89.21
+99 client:  [8 9]
+87 client:  [4 5]
+1 client:  [2 3]
+83 client:  [6 7]
+6 client:  [2 3]
+14 client:  [8 9]
+19 client:  [8 9]
+84 client:  [8 9]
+24 client:  [8 9]
+58 client:  [6 7]
+Round 151, Average loss 0.155
+Round 151, Average global accuracy 86.00
+Round 151, Average local accuracy 86.52
+74 client:  [8 9]
+85 client:  [0 1]
+32 client:  [4 5]
+31 client:  [2 3]
+81 client:  [2 3]
+64 client:  [8 9]
+18 client:  [6 7]
+66 client:  [2 3]
+1 client:  [2 3]
+33 client:  [6 7]
+Round 152, Average loss 0.223
+Round 152, Average global accuracy 88.00
+Round 152, Average local accuracy 89.95
+4 client:  [8 9]
+21 client:  [2 3]
+60 client:  [0 1]
+56 client:  [2 3]
+66 client:  [2 3]
+6 client:  [2 3]
+96 client:  [2 3]
+85 client:  [0 1]
+14 client:  [8 9]
+36 client:  [2 3]
+Round 153, Average loss 0.121
+Round 153, Average global accuracy 82.00
+Round 153, Average local accuracy 84.70
+13 client:  [6 7]
+78 client:  [6 7]
+18 client:  [6 7]
+73 client:  [6 7]
+7 client:  [4 5]
+60 client:  [0 1]
+91 client:  [2 3]
+79 client:  [8 9]
+41 client:  [2 3]
+82 client:  [4 5]
+Round 154, Average loss 0.171
+Round 154, Average global accuracy 86.00
+Round 154, Average local accuracy 88.31
+87 client:  [4 5]
+11 client:  [2 3]
+27 client:  [4 5]
+32 client:  [4 5]
+62 client:  [4 5]
+77 client:  [4 5]
+89 client:  [8 9]
+17 client:  [4 5]
+82 client:  [4 5]
+78 client:  [6 7]
+Round 155, Average loss 0.269
+Round 155, Average global accuracy 88.00
+Round 155, Average local accuracy 88.41
+47 client:  [4 5]
+43 client:  [6 7]
+50 client:  [0 1]
+96 client:  [2 3]
+20 client:  [0 1]
+89 client:  [8 9]
+65 client:  [0 1]
+73 client:  [6 7]
+72 client:  [4 5]
+71 client:  [2 3]
+Round 156, Average loss 0.205
+Round 156, Average global accuracy 88.00
+Round 156, Average local accuracy 88.73
+13 client:  [6 7]
+78 client:  [6 7]
+8 client:  [6 7]
+20 client:  [0 1]
+5 client:  [0 1]
+29 client:  [8 9]
+86 client:  [2 3]
+39 client:  [8 9]
+84 client:  [8 9]
+91 client:  [2 3]
+Round 157, Average loss 0.153
+Round 157, Average global accuracy 89.00
+Round 157, Average local accuracy 90.08
+60 client:  [0 1]
+76 client:  [2 3]
+34 client:  [8 9]
+68 client:  [6 7]
+0 client:  [0 1]
+40 client:  [0 1]
+42 client:  [4 5]
+14 client:  [8 9]
+79 client:  [8 9]
+35 client:  [0 1]
+Round 158, Average loss 0.156
+Round 158, Average global accuracy 88.00
+Round 158, Average local accuracy 89.41
+17 client:  [4 5]
+34 client:  [8 9]
+49 client:  [8 9]
+91 client:  [2 3]
+11 client:  [2 3]
+95 client:  [0 1]
+99 client:  [8 9]
+72 client:  [4 5]
+6 client:  [2 3]
+14 client:  [8 9]
+Round 159, Average loss 0.192
+Round 159, Average global accuracy 87.00
+Round 159, Average local accuracy 88.25
+83 client:  [6 7]
+34 client:  [8 9]
+59 client:  [8 9]
+30 client:  [0 1]
+47 client:  [4 5]
+80 client:  [0 1]
+2 client:  [4 5]
+52 client:  [4 5]
+58 client:  [6 7]
+39 client:  [8 9]
+Round 160, Average loss 0.142
+Round 160, Average global accuracy 86.00
+Round 160, Average local accuracy 87.22
+91 client:  [2 3]
+38 client:  [6 7]
+93 client:  [6 7]
+0 client:  [0 1]
+26 client:  [2 3]
+60 client:  [0 1]
+57 client:  [4 5]
+68 client:  [6 7]
+17 client:  [4 5]
+48 client:  [6 7]
+Round 161, Average loss 0.175
+Round 161, Average global accuracy 88.00
+Round 161, Average local accuracy 89.35
+84 client:  [8 9]
+35 client:  [0 1]
+55 client:  [0 1]
+18 client:  [6 7]
+81 client:  [2 3]
+28 client:  [6 7]
+56 client:  [2 3]
+8 client:  [6 7]
+66 client:  [2 3]
+9 client:  [8 9]
+Round 162, Average loss 0.143
+Round 162, Average global accuracy 86.00
+Round 162, Average local accuracy 87.73
+98 client:  [6 7]
+20 client:  [0 1]
+61 client:  [2 3]
+31 client:  [2 3]
+87 client:  [4 5]
+18 client:  [6 7]
+2 client:  [4 5]
+85 client:  [0 1]
+99 client:  [8 9]
+13 client:  [6 7]
+Round 163, Average loss 0.159
+Round 163, Average global accuracy 86.00
+Round 163, Average local accuracy 87.16
+90 client:  [0 1]
+9 client:  [8 9]
+16 client:  [2 3]
+91 client:  [2 3]
+82 client:  [4 5]
+89 client:  [8 9]
+42 client:  [4 5]
+66 client:  [2 3]
+56 client:  [2 3]
+7 client:  [4 5]
+Round 164, Average loss 0.213
+Round 164, Average global accuracy 87.00
+Round 164, Average local accuracy 88.44
+88 client:  [6 7]
+91 client:  [2 3]
+97 client:  [4 5]
+7 client:  [4 5]
+19 client:  [8 9]
+67 client:  [4 5]
+58 client:  [6 7]
+39 client:  [8 9]
+36 client:  [2 3]
+89 client:  [8 9]
+Round 165, Average loss 0.160
+Round 165, Average global accuracy 89.00
+Round 165, Average local accuracy 91.04
+79 client:  [8 9]
+85 client:  [0 1]
+18 client:  [6 7]
+46 client:  [2 3]
+89 client:  [8 9]
+84 client:  [8 9]
+61 client:  [2 3]
+90 client:  [0 1]
+9 client:  [8 9]
+16 client:  [2 3]
+Round 166, Average loss 0.225
+Round 166, Average global accuracy 88.00
+Round 166, Average local accuracy 89.31
+12 client:  [4 5]
+58 client:  [6 7]
+1 client:  [2 3]
+89 client:  [8 9]
+19 client:  [8 9]
+83 client:  [6 7]
+23 client:  [6 7]
+45 client:  [0 1]
+77 client:  [4 5]
+47 client:  [4 5]
+Round 167, Average loss 0.169
+Round 167, Average global accuracy 89.00
+Round 167, Average local accuracy 90.40
+25 client:  [0 1]
+56 client:  [2 3]
+40 client:  [0 1]
+51 client:  [2 3]
+79 client:  [8 9]
+87 client:  [4 5]
+64 client:  [8 9]
+98 client:  [6 7]
+13 client:  [6 7]
+37 client:  [4 5]
+Round 168, Average loss 0.143
+Round 168, Average global accuracy 89.00
+Round 168, Average local accuracy 90.90
+88 client:  [6 7]
+22 client:  [4 5]
+29 client:  [8 9]
+89 client:  [8 9]
+54 client:  [8 9]
+18 client:  [6 7]
+80 client:  [0 1]
+95 client:  [0 1]
+23 client:  [6 7]
+58 client:  [6 7]
+Round 169, Average loss 0.173
+Round 169, Average global accuracy 89.00
+Round 169, Average local accuracy 89.72
+93 client:  [6 7]
+96 client:  [2 3]
+19 client:  [8 9]
+66 client:  [2 3]
+23 client:  [6 7]
+94 client:  [8 9]
+85 client:  [0 1]
+55 client:  [0 1]
+28 client:  [6 7]
+12 client:  [4 5]
+Round 170, Average loss 0.091
+Round 170, Average global accuracy 89.00
+Round 170, Average local accuracy 89.28
+5 client:  [0 1]
+20 client:  [0 1]
+16 client:  [2 3]
+2 client:  [4 5]
+14 client:  [8 9]
+95 client:  [0 1]
+62 client:  [4 5]
+40 client:  [0 1]
+66 client:  [2 3]
+80 client:  [0 1]
+Round 171, Average loss 0.170
+Round 171, Average global accuracy 89.00
+Round 171, Average local accuracy 90.58
+54 client:  [8 9]
+67 client:  [4 5]
+36 client:  [2 3]
+63 client:  [6 7]
+86 client:  [2 3]
+80 client:  [0 1]
+37 client:  [4 5]
+60 client:  [0 1]
+47 client:  [4 5]
+23 client:  [6 7]
+Round 172, Average loss 0.151
+Round 172, Average global accuracy 89.00
+Round 172, Average local accuracy 89.58
+51 client:  [2 3]
+83 client:  [6 7]
+14 client:  [8 9]
+33 client:  [6 7]
+95 client:  [0 1]
+54 client:  [8 9]
+36 client:  [2 3]
+49 client:  [8 9]
+55 client:  [0 1]
+26 client:  [2 3]
+Round 173, Average loss 0.145
+Round 173, Average global accuracy 88.00
+Round 173, Average local accuracy 89.24
+85 client:  [0 1]
+99 client:  [8 9]
+73 client:  [6 7]
+33 client:  [6 7]
+32 client:  [4 5]
+72 client:  [4 5]
+15 client:  [0 1]
+18 client:  [6 7]
+82 client:  [4 5]
+1 client:  [2 3]
+Round 174, Average loss 0.139
+Round 174, Average global accuracy 88.00
+Round 174, Average local accuracy 88.89
+75 client:  [0 1]
+12 client:  [4 5]
+15 client:  [0 1]
+89 client:  [8 9]
+78 client:  [6 7]
+26 client:  [2 3]
+35 client:  [0 1]
+32 client:  [4 5]
+79 client:  [8 9]
+18 client:  [6 7]
+Round 175, Average loss 0.112
+Round 175, Average global accuracy 89.00
+Round 175, Average local accuracy 89.14
+99 client:  [8 9]
+86 client:  [2 3]
+28 client:  [6 7]
+84 client:  [8 9]
+11 client:  [2 3]
+31 client:  [2 3]
+53 client:  [6 7]
+3 client:  [6 7]
+27 client:  [4 5]
+92 client:  [4 5]
+Round 176, Average loss 0.217
+Round 176, Average global accuracy 89.00
+Round 176, Average local accuracy 89.49
+41 client:  [2 3]
+85 client:  [0 1]
+32 client:  [4 5]
+67 client:  [4 5]
+58 client:  [6 7]
+70 client:  [0 1]
+53 client:  [6 7]
+50 client:  [0 1]
+79 client:  [8 9]
+74 client:  [8 9]
+Round 177, Average loss 0.154
+Round 177, Average global accuracy 89.00
+Round 177, Average local accuracy 89.24
+5 client:  [0 1]
+10 client:  [0 1]
+67 client:  [4 5]
+57 client:  [4 5]
+76 client:  [2 3]
+43 client:  [6 7]
+52 client:  [4 5]
+87 client:  [4 5]
+33 client:  [6 7]
+78 client:  [6 7]
+Round 178, Average loss 0.109
+Round 178, Average global accuracy 86.00
+Round 178, Average local accuracy 86.04
+26 client:  [2 3]
+28 client:  [6 7]
+31 client:  [2 3]
+68 client:  [6 7]
+14 client:  [8 9]
+9 client:  [8 9]
+89 client:  [8 9]
+35 client:  [0 1]
+72 client:  [4 5]
+21 client:  [2 3]
+Round 179, Average loss 0.184
+Round 179, Average global accuracy 89.00
+Round 179, Average local accuracy 90.13
+29 client:  [8 9]
+85 client:  [0 1]
+19 client:  [8 9]
+61 client:  [2 3]
+91 client:  [2 3]
+95 client:  [0 1]
+73 client:  [6 7]
+18 client:  [6 7]
+62 client:  [4 5]
+36 client:  [2 3]
+Round 180, Average loss 0.186
+Round 180, Average global accuracy 89.00
+Round 180, Average local accuracy 91.07
+53 client:  [6 7]
+35 client:  [0 1]
+95 client:  [0 1]
+22 client:  [4 5]
+20 client:  [0 1]
+58 client:  [6 7]
+29 client:  [8 9]
+38 client:  [6 7]
+9 client:  [8 9]
+55 client:  [0 1]
+Round 181, Average loss 0.174
+Round 181, Average global accuracy 89.00
+Round 181, Average local accuracy 90.16
+42 client:  [4 5]
+85 client:  [0 1]
+80 client:  [0 1]
+14 client:  [8 9]
+68 client:  [6 7]
+96 client:  [2 3]
+40 client:  [0 1]
+90 client:  [0 1]
+3 client:  [6 7]
+36 client:  [2 3]
+Round 182, Average loss 0.157
+Round 182, Average global accuracy 89.00
+Round 182, Average local accuracy 90.80
+87 client:  [4 5]
+2 client:  [4 5]
+46 client:  [2 3]
+93 client:  [6 7]
+37 client:  [4 5]
+81 client:  [2 3]
+19 client:  [8 9]
+82 client:  [4 5]
+94 client:  [8 9]
+78 client:  [6 7]
+Round 183, Average loss 0.214
+Round 183, Average global accuracy 89.00
+Round 183, Average local accuracy 90.53
+90 client:  [0 1]
+37 client:  [4 5]
+58 client:  [6 7]
+67 client:  [4 5]
+89 client:  [8 9]
+61 client:  [2 3]
+79 client:  [8 9]
+32 client:  [4 5]
+52 client:  [4 5]
+91 client:  [2 3]
+Round 184, Average loss 0.184
+Round 184, Average global accuracy 89.00
+Round 184, Average local accuracy 89.16
+87 client:  [4 5]
+85 client:  [0 1]
+83 client:  [6 7]
+38 client:  [6 7]
+17 client:  [4 5]
+56 client:  [2 3]
+5 client:  [0 1]
+26 client:  [2 3]
+21 client:  [2 3]
+54 client:  [8 9]
+Round 185, Average loss 0.149
+Round 185, Average global accuracy 88.00
+Round 185, Average local accuracy 88.41
+67 client:  [4 5]
+70 client:  [0 1]
+30 client:  [0 1]
+32 client:  [4 5]
+24 client:  [8 9]
+75 client:  [0 1]
+45 client:  [0 1]
+26 client:  [2 3]
+27 client:  [4 5]
+22 client:  [4 5]
+Round 186, Average loss 0.150
+Round 186, Average global accuracy 87.00
+Round 186, Average local accuracy 87.25
+27 client:  [4 5]
+4 client:  [8 9]
+59 client:  [8 9]
+34 client:  [8 9]
+50 client:  [0 1]
+28 client:  [6 7]
+29 client:  [8 9]
+47 client:  [4 5]
+81 client:  [2 3]
+43 client:  [6 7]
+Round 187, Average loss 0.160
+Round 187, Average global accuracy 87.00
+Round 187, Average local accuracy 87.92
+22 client:  [4 5]
+50 client:  [0 1]
+58 client:  [6 7]
+1 client:  [2 3]
+48 client:  [6 7]
+0 client:  [0 1]
+60 client:  [0 1]
+32 client:  [4 5]
+18 client:  [6 7]
+30 client:  [0 1]
+Round 188, Average loss 0.157
+Round 188, Average global accuracy 88.00
+Round 188, Average local accuracy 88.92
+81 client:  [2 3]
+37 client:  [4 5]
+55 client:  [0 1]
+10 client:  [0 1]
+72 client:  [4 5]
+47 client:  [4 5]
+35 client:  [0 1]
+19 client:  [8 9]
+85 client:  [0 1]
+87 client:  [4 5]
+Round 189, Average loss 0.138
+Round 189, Average global accuracy 87.00
+Round 189, Average local accuracy 87.35
+45 client:  [0 1]
+25 client:  [0 1]
+60 client:  [0 1]
+99 client:  [8 9]
+11 client:  [2 3]
+68 client:  [6 7]
+2 client:  [4 5]
+85 client:  [0 1]
+20 client:  [0 1]
+57 client:  [4 5]
+Round 190, Average loss 0.107
+Round 190, Average global accuracy 88.00
+Round 190, Average local accuracy 87.22
+46 client:  [2 3]
+25 client:  [0 1]
+81 client:  [2 3]
+59 client:  [8 9]
+65 client:  [0 1]
+55 client:  [0 1]
+60 client:  [0 1]
+97 client:  [4 5]
+12 client:  [4 5]
+0 client:  [0 1]
+Round 191, Average loss 0.221
+Round 191, Average global accuracy 86.00
+Round 191, Average local accuracy 86.56
+55 client:  [0 1]
+83 client:  [6 7]
+43 client:  [6 7]
+9 client:  [8 9]
+7 client:  [4 5]
+73 client:  [6 7]
+87 client:  [4 5]
+97 client:  [4 5]
+66 client:  [2 3]
+25 client:  [0 1]
+Round 192, Average loss 0.154
+Round 192, Average global accuracy 86.00
+Round 192, Average local accuracy 86.04
+3 client:  [6 7]
+67 client:  [4 5]
+93 client:  [6 7]
+56 client:  [2 3]
+38 client:  [6 7]
+16 client:  [2 3]
+43 client:  [6 7]
+65 client:  [0 1]
+13 client:  [6 7]
+8 client:  [6 7]
+Round 193, Average loss 0.146
+Round 193, Average global accuracy 86.00
+Round 193, Average local accuracy 85.67
+80 client:  [0 1]
+44 client:  [8 9]
+98 client:  [6 7]
+68 client:  [6 7]
+75 client:  [0 1]
+79 client:  [8 9]
+62 client:  [4 5]
+53 client:  [6 7]
+9 client:  [8 9]
+2 client:  [4 5]
+Round 194, Average loss 0.229
+Round 194, Average global accuracy 88.00
+Round 194, Average local accuracy 87.90
+82 client:  [4 5]
+97 client:  [4 5]
+90 client:  [0 1]
+10 client:  [0 1]
+15 client:  [0 1]
+19 client:  [8 9]
+25 client:  [0 1]
+30 client:  [0 1]
+79 client:  [8 9]
+80 client:  [0 1]
+Round 195, Average loss 0.124
+Round 195, Average global accuracy 88.00
+Round 195, Average local accuracy 88.47
+43 client:  [6 7]
+56 client:  [2 3]
+86 client:  [2 3]
+92 client:  [4 5]
+42 client:  [4 5]
+1 client:  [2 3]
+65 client:  [0 1]
+99 client:  [8 9]
+88 client:  [6 7]
+26 client:  [2 3]
+Round 196, Average loss 0.176
+Round 196, Average global accuracy 89.00
+Round 196, Average local accuracy 90.15
+61 client:  [2 3]
+72 client:  [4 5]
+62 client:  [4 5]
+8 client:  [6 7]
+98 client:  [6 7]
+26 client:  [2 3]
+20 client:  [0 1]
+14 client:  [8 9]
+95 client:  [0 1]
+7 client:  [4 5]
+Round 197, Average loss 0.170
+Round 197, Average global accuracy 88.00
+Round 197, Average local accuracy 88.45
+79 client:  [8 9]
+60 client:  [0 1]
+31 client:  [2 3]
+45 client:  [0 1]
+28 client:  [6 7]
+6 client:  [2 3]
+52 client:  [4 5]
+13 client:  [6 7]
+43 client:  [6 7]
+42 client:  [4 5]
+Round 198, Average loss 0.177
+Round 198, Average global accuracy 88.00
+Round 198, Average local accuracy 88.99
+60 client:  [0 1]
+26 client:  [2 3]
+68 client:  [6 7]
+36 client:  [2 3]
+54 client:  [8 9]
+47 client:  [4 5]
+53 client:  [6 7]
+59 client:  [8 9]
+46 client:  [2 3]
+15 client:  [0 1]
+Round 199, Average loss 0.151
+Round 199, Average global accuracy 88.00
+Round 199, Average local accuracy 89.77
+save model to: ./save/seed42_net-fedavg_glob_mnist_softmax_200_K100C0.1_noniid2unb2.0_E1B10.pt

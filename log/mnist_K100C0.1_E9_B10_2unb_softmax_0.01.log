@@ -1,0 +1,86 @@
+Namespace(bs=128, centralized=True, class_per_device=2, dataset='mnist', decay_rate=0.995, device=device(type='cuda', index=0), epochs=200, frac=0.1, gpu=0, kernel_num=9, kernel_sizes='3,4,5', local_bs=10, local_ep=9, lr=0.01, manual_seed=42, max_data_per_device=0, max_pool='True', model='softmax', momentum=0, noniid=1, noniidness=20, norm='batch_norm', num_channels=1, num_classes=10, num_filters=32, num_users=100, per_epoch=1.0, seed=1, split='user', stopping_rounds=10, unbalance=2.0, verbose=False)
+use random seed: 42
+args.noniid= 1 args.class_per_device= 2 args.unbalance= 2.0
+/home/zju/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:43: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+[5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+unbalancing
+/home/zju/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:48: UserWarning: test_labels has been renamed targets
+  warnings.warn("test_labels has been renamed targets")
+[980, 1135, 1032, 1010, 982, 892, 958, 1028, 974, 1009]
+unbalancing
+train data partition
+sum: 59901
+mean: 599.01
+std: 874.0787892976239
+test data partition
+sum: 9921
+mean: 99.21
+std: 144.76638387415775
+federated learning...
+SoftmaxClassifier(
+  (layer_input): Linear(in_features=784, out_features=10, bias=True)
+)
+33 client:  [6 7]
+77 client:  [4 5]
+69 client:  [8 9]
+13 client:  [6 7]
+63 client:  [6 7]
+87 client:  [4 5]
+72 client:  [4 5]
+18 client:  [6 7]
+91 client:  [2 3]
+48 client:  [6 7]
+Round   0, Average loss 0.132
+Round   0, Average global accuracy 23.00
+Round   0, Average local accuracy 25.12
+70 client:  [0 1]
+18 client:  [6 7]
+55 client:  [0 1]
+79 client:  [8 9]
+9 client:  [8 9]
+61 client:  [2 3]
+16 client:  [2 3]
+97 client:  [4 5]
+10 client:  [0 1]
+19 client:  [8 9]
+Round   1, Average loss 0.069
+Round   1, Average global accuracy 49.00
+Round   1, Average local accuracy 48.78
+29 client:  [8 9]
+23 client:  [6 7]
+27 client:  [4 5]
+84 client:  [8 9]
+74 client:  [8 9]
+2 client:  [4 5]
+98 client:  [6 7]
+16 client:  [2 3]
+8 client:  [6 7]
+82 client:  [4 5]
+Round   2, Average loss 0.069
+Round   2, Average global accuracy 48.00
+Round   2, Average local accuracy 49.51
+83 client:  [6 7]
+21 client:  [2 3]
+1 client:  [2 3]
+69 client:  [8 9]
+55 client:  [0 1]
+12 client:  [4 5]
+89 client:  [8 9]
+32 client:  [4 5]
+88 client:  [6 7]
+26 client:  [2 3]
+Round   3, Average loss 0.034
+Round   3, Average global accuracy 59.00
+Round   3, Average local accuracy 59.12
+80 client:  [0 1]
+34 client:  [8 9]
+0 client:  [0 1]
+93 client:  [6 7]
+43 client:  [6 7]
+46 client:  [2 3]
+96 client:  [2 3]
+86 client:  [2 3]
+6 client:  [2 3]
+23 client:  [6 7]
+Round   4, Average loss 0.058
