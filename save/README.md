@@ -1,3 +1,3 @@
-# Data
+# Saved Files
 
-MNIST & CIFAR-10 datasets will be downloaded automatically by the torchvision package.
+The .png/.pkl/.pt files that are generated during running our project are stored under this path. 
